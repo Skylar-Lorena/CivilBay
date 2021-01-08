@@ -2,11 +2,18 @@ package com.skylar.civilbay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static com.skylar.civilbay.R.layout.activity_profile;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -16,23 +23,23 @@ public class ProfileActivity extends AppCompatActivity {
     EditText userName;
 
     //   Bind User age
-    @BindView(R.id.password)
+    @BindView(R.id.age)
     EditText age;
 
     //   Bind User occupation
-    @BindView(R.id.password)
+    @BindView(R.id.occupation)
     EditText occupation;
 
     //   Bind User email
-    @BindView(R.id.password)
+    @BindView(R.id.email)
     EditText email;
 
     //   Bind User skills
-    @BindView(R.id.password)
+    @BindView(R.id.skills)
     EditText skills;
 
     //   Bind User location
-    @BindView(R.id.password)
+    @BindView(R.id.location)
     EditText location;
 
     //   Bind User password
@@ -46,6 +53,20 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(activity_profile);
+
+        ButterKnife.bind(this);
+
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
+
+                startActivity(intent);
+
+//        Toast.makeText(this,"Username:"+userName + ", age:"+age +" ,email:"+email+ ",  occupation:"+occupation+ "skills:"+skills + ", Location:", Toast.LENGTH_LONG)
+//                .show();
+            }
+        });
     }
 }
