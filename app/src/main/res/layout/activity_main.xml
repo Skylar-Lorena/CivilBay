@@ -4,22 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:src="@drawable/bg"
-        android:scaleType="fitXY"/>
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40sp"
-        android:textSize="40sp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/purple_200"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <Button
@@ -27,9 +24,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
         android:layout_centerHorizontal="true"
-        android:text="Join Us"
-        android:textColor="@color/white"
-        android:background="@color/design_default_color_primary_variant"/>
+        android:background="@color/purple_200"
+        android:text="Join Us" />
+
 
 </RelativeLayout>
