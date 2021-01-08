@@ -19,23 +19,32 @@ import static com.skylar.civilbay.R.layout.activity_profile;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private static final String TAG = SearchActivity.class.getSimpleName();
+    //   Bind user name field
+    @BindView(R.id.userNameEditText)
+    EditText userNameEditText;
 
-    private EditText occupation;
-    private EditText password;
-    private Button   signUpButton;
-    private EditText userNameEditText;
+    //   Bind User occupation
+    @BindView(R.id.occupation)
+    EditText occupation;
+
+    //   Bind User email
+    @BindView(R.id.email)
+    EditText email;
+
+    //   Bind User password
+    @BindView(R.id.password)
+    EditText password;
+
+    //    Do the same for sign Up button
+    @BindView(R.id.signUpButton)
+    Button signUpButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(activity_profile);
 
-        occupation = (EditText) findViewById(R.id.occupation);
-        password = (EditText) findViewById(R.id.password);
-        signUpButton = (Button) findViewById(R.id.signUpButton);
-        userNameEditText = (EditText) findViewById(R.id.userNameEditText);
-
+        ButterKnife.bind(this);
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
 

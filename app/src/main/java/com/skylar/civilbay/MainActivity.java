@@ -8,15 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
-    private Button joinButton;
+   @BindView(R.id.joinButton)
+   Button joinButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        joinButton =  (Button) findViewById((R.id.joinButton));
+        ButterKnife.bind(this);
 
         joinButton.setOnClickListener(new View.OnClickListener() {
             @Override

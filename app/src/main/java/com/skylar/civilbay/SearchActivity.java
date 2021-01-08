@@ -12,10 +12,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class SearchActivity extends AppCompatActivity {
     public static final String TAG = SearchActivity.class.getSimpleName();
-    private TextView userNameTextView;
-    private ListView mListView;
+
+    @BindView(R.id.userNameTextView) TextView userNameTextView;
+    @BindView(R.id.listView) ListView mListView;
+
 
     private String[] companies = new String[] {"Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
@@ -28,8 +33,7 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        userNameTextView = (TextView) findViewById(R.id.userNameTextView);
-        mListView = (ListView) findViewById(R.id.listView);
+        ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, companies);
         mListView.setAdapter(adapter);
