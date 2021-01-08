@@ -24,27 +24,26 @@ public class ProfileActivity extends AppCompatActivity {
     private EditText occupation;
     private EditText password;
     private Button signUpButton;
-    private TextView profile;
+    private TextView userNameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(activity_profile);
 
-        userName = (EditText) findViewById(R.id.userName);
         occupation = (EditText) findViewById(R.id.occupation);
         password = (EditText) findViewById(R.id.password);
         signUpButton = (Button) findViewById(R.id.signUpButton);
-        profile = (TextView) findViewById(R.id.profile);
+        userNameTextView = (TextView) findViewById(R.id.userNameTextView);
 
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                String details = profile.getText().toString();
+                String userName = userNameTextView.getText().toString();
                 Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
-                intent.putExtra("details", details);
+                intent.putExtra("userName", userName);
                 startActivity(intent);
 
             }
