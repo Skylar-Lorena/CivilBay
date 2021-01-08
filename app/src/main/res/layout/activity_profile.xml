@@ -12,7 +12,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Civil Bay!"
+        android:text="Set up your profile!"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -66,7 +66,7 @@
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/skills"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -86,6 +86,18 @@
         android:padding="5dp"
         android:textColor="@color/black" />
 
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="text"
+        android:textColor="@color/black" />
+
+
     <Button
         android:id="@+id/signUpButton"
         android:layout_width="match_parent"
@@ -93,6 +105,12 @@
         android:layout_marginTop="8dp"
         android:background="@color/purple_200"
         android:text="Sign Up" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/profimage"
+        android:layout_marginTop="20dp" />
 
 
 </LinearLayout>
