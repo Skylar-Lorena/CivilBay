@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import butterknife.BindView;
+
 public class ProfileActivity extends AppCompatActivity {
 
 
@@ -15,23 +17,23 @@ public class ProfileActivity extends AppCompatActivity {
 
     //   Bind User age
     @BindView(R.id.password)
-    EditText password;
+    EditText age;
 
     //   Bind User occupation
     @BindView(R.id.password)
-    EditText password;
+    EditText occupation;
 
     //   Bind User email
     @BindView(R.id.password)
-    EditText password;
+    EditText email;
 
     //   Bind User skills
     @BindView(R.id.password)
-    EditText password;
+    EditText skills;
 
     //   Bind User location
     @BindView(R.id.password)
-    EditText password;
+    EditText location;
 
     //   Bind User password
     @BindView(R.id.password)
@@ -39,7 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     //    Do the same for sign Up button
     @BindView(R.id.signUpButton)
-
+    Button signUpButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
