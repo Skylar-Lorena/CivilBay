@@ -17,3 +17,5 @@ gradle.properties
 settings.gradle
 gradlew.bat
 gradlew
+gradle/
+.idea/
