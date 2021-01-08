@@ -28,6 +28,9 @@ public class SearchActivity extends AppCompatActivity {
             "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
             "Lardo", "Portland City Grill", "Fat Head's Brewery",
             "Chipotle", "Subway"};
+    private String[] cuisines = new String[] {"Vegan Food", "Breakfast",
+            "Fishs Dishs", "Scandinavian", "Coffee", "English Food", "Burgers", "Fast Food",
+            "Noodle Soups", "Mexican", "BBQ", "Cuban", "Bar Food", "Sports Bar", "Breakfast", "Mexican" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
