@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Civil Bay "
-        android:id="@+id/profile"
+        android:id="@+id/profileTextView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
