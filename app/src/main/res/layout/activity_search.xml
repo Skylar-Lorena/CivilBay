@@ -1,43 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Civil Bay! "
-        android:layout_marginBottom="20dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="@drawable/prof"
+    tools:context=".SearchActivity" >
 
     <TextView
         android:id="@+id/userNameTextView"
-        android:textSize="18dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Sync Now!" />
+        android:layout_marginBottom="18dp"
+        android:text="Welcome to Civil Bay!"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <ListView
+        android:id="@+id/listView"
+        android:layout_marginTop="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold|italic"
         android:layout_below="@+id/userNameTextView"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
 
 
-</LinearLayout>
+</RelativeLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -35,19 +36,21 @@ public class SearchActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, companies);
-        mListView.setAdapter(adapter);
+//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, companies);
+//        mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String companies = ((TextView)view).getText().toString();
+
                 Toast.makeText(SearchActivity.this, companies, Toast.LENGTH_LONG).show();
             }
         });
 
         Intent intent = getIntent();
         String userName = intent.getStringExtra("userName");
-        userNameTextView.setText("Here are construction companies in your region " + userName);
+        userNameTextView.setText("Here are some construction companies in your region " + userName);
+
     }
 }

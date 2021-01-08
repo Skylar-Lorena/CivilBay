@@ -17,7 +17,7 @@
         android:fontFamily="@font/roboto"
         android:textColor="@color/purple_200"
         android:textSize="50sp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/joinButton"
