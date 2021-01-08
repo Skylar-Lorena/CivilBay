@@ -55,6 +55,8 @@ public class ProfileActivity extends AppCompatActivity {
                 intent.putExtra("userName", userName);
                 startActivity(intent);
 
+                Toast.makeText(ProfileActivity.this, "Sign Up Successful!", Toast.LENGTH_LONG).show();
+
             }
         });
     }
