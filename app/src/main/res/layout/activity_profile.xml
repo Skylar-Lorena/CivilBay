@@ -21,9 +21,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
-
     <EditText
         android:id="@+id/occupation"
         android:layout_width="match_parent"
@@ -57,14 +54,15 @@
         android:inputType="text"
         android:textColor="@color/black" />
 
-    <TextView
-        android:id="@+id/userNameTextView"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/userNameEditText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Civil Bay Profile "
-        android:layout_marginTop="15dp"/>
-
-
+        android:ems="10"
+        android:hint="Enter User Name "
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:background="@color/white"/>
 
     <Button
         android:id="@+id/signUpButton"

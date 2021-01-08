@@ -20,11 +20,11 @@ import static com.skylar.civilbay.R.layout.activity_profile;
 public class ProfileActivity extends AppCompatActivity {
 
     private static final String TAG = SearchActivity.class.getSimpleName();
-    private EditText userName;
+
     private EditText occupation;
     private EditText password;
-    private Button signUpButton;
-    private TextView userNameTextView;
+    private Button   signUpButton;
+    private EditText userNameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +34,14 @@ public class ProfileActivity extends AppCompatActivity {
         occupation = (EditText) findViewById(R.id.occupation);
         password = (EditText) findViewById(R.id.password);
         signUpButton = (Button) findViewById(R.id.signUpButton);
-        userNameTextView = (TextView) findViewById(R.id.userNameTextView);
+        userNameEditText = (EditText) findViewById(R.id.userNameEditText);
 
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                String userName = userNameTextView.getText().toString();
+                String userName = userNameEditText.getText().toString();
                 Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
                 intent.putExtra("userName", userName);
                 startActivity(intent);

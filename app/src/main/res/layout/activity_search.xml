@@ -9,10 +9,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Civil Bay "
-        android:id="@+id/profileTextView"
+        android:text="Welcome to Civil Bay! "
+        android:id="@+id/userNameTextView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/userNameTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 
