@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/bg"
+        android:scaleType="fitXY"/>
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -14,7 +19,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40sp"
-        android:text="Civil Bay"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -25,6 +29,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Sign Up"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:background="@color/design_default_color_primary_variant"/>
 
 </RelativeLayout>
