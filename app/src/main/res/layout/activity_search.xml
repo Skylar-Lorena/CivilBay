@@ -17,13 +17,12 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_marginTop="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/purple_200"
-        android:textStyle="bold|italic"
         android:layout_below="@+id/userNameTextView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:textStyle="bold|italic" />
 
 
 

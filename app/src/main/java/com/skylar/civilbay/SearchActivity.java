@@ -51,7 +51,7 @@ public class SearchActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         CivilBayArrayAdapter adapter = new CivilBayArrayAdapter(this, android.R.layout.simple_list_item_1, companies, skills);
-
+        mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
