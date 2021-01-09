@@ -40,6 +40,9 @@ public class ProfileActivity extends AppCompatActivity implements OnClickListene
     @BindView(R.id.signUpButton)
     Button signUpButton;
 
+    @BindView(R.id.loginButton)
+    Button loginButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,17 +51,24 @@ public class ProfileActivity extends AppCompatActivity implements OnClickListene
         ButterKnife.bind(this);
 
         signUpButton.setOnClickListener(this);
+        loginButton.setOnClickListener(this);
     }
             @Override
-            public void onClick(View v) {
-                if (v == signUpButton) {
+            public void onClick (View v) {
+                if (v == loginButton) {
+                    Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+
+                    startActivity(intent);
+
+                }
+               else if (v == signUpButton) {
                     String userName = userNameEditText.getText().toString();
                     Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
                     intent.putExtra("userName", userName);
                     startActivity(intent);
 
                     Toast.makeText(ProfileActivity.this, "Sign Up Successful!", Toast.LENGTH_LONG).show();
-
                 }
-            }
-        }
+            };
+}
+

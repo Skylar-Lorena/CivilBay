@@ -12,8 +12,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-   @BindView(R.id.joinButton)
-   Button joinButton;
+    @BindView(R.id.joinButton)
+    Button joinButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+
         joinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
                 startActivity(intent);
                 Toast.makeText(MainActivity.this, "Welcome to Civil Bay!", Toast.LENGTH_LONG).show();
+
             }
         });
     }
