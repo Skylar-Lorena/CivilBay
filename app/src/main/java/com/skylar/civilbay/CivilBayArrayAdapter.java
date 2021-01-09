@@ -6,20 +6,20 @@ import android.widget.ArrayAdapter;
 public class CivilBayArrayAdapter extends ArrayAdapter {
     private Context mContext;
     private  String[] companies;
-    private String[] skills;
+    private String[] contacts;
 
-    public CivilBayArrayAdapter(Context mContext, int resource, String[] companies, String[] skills) {
+    public CivilBayArrayAdapter(Context mContext, int resource, String[] companies, String[] contacts) {
         super(mContext, resource);
         this.mContext = mContext;
         this.companies = companies;
-        this.skills = skills;
+        this.contacts = contacts;
     }
 
     @Override
     public Object getItem(int position) {
         String company = companies[position];
-        String skill = skills[position];
-        return String.format("%s \nProvides great: %s", company, skill);
+        String contact = contacts[position];
+        return String.format("%s \nTop Rated: %s", company, contact);
     }
 
     @Override

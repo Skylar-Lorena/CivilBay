@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/prof"
-    tools:context=".SearchActivity" >
+    tools:context=".SearchActivity"
+    android:textColor="@color/white">
 
     <TextView
         android:id="@+id/userNameTextView"
@@ -22,15 +23,11 @@
         android:layout_below="@+id/userNameTextView"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="18dp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+       android:textColor="@color/white"
+        android:textSize="18dp"/>
 
-    <Button
-        android:id="@+id/moodButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/purple_200"
-        android:text="FeedBack" />
+
 
 
 

@@ -15,15 +15,12 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.joinButton)
     Button joinButton;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-
 
         joinButton.setOnClickListener(new View.OnClickListener() {
             @Override

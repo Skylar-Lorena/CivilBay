@@ -30,9 +30,6 @@ public class SearchActivity extends AppCompatActivity {
 
     public static final String TAG = SearchActivity.class.getSimpleName();
 
-    @BindView(R.id.moodButton)
-    Button moodButton;
-
     @BindView(R.id.userNameTextView)
     TextView userNameTextView;
 
@@ -40,15 +37,15 @@ public class SearchActivity extends AppCompatActivity {
     ListView mListView;
 
 
-    private String[] companies = new String[] {"Mi Mero Mole", "Mother's Bistro",
-            "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
-            "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
-            "Lardo", "Portland City Grill", "Fat Head's Brewery",
-            "Chipotle", "Subway"};
+    private String[] companies = new String[] {"Kenya Builders & Concrete Co Ltd", "Ujenzibora Investment Limited",
+            "Interways Works Ltd", "Sobetra Kenya", "H YOUNG & CO (E.A) LTD", "Eldad Engineering & Construction Limited",
+            "Laxmanbhai Construction Ltd", "Associated Construction Co (K) Ltd", "Rhombus Concrete", "Eco - homes ltd",
+            "Institution of Surveyors of Kenya", "TVET Authority", "Vee Vee Enterprises Limited",
+            "Famio Services Ltd", "Oaks Construction Co. Ltd"};
 
-    private String[] skills = new String[] {"Vegan Food", "Breakfast",
-            "Fishs Dishs", "Scandinavian", "Coffee", "English Food", "Burgers", "Fast Food",
-            "Noodle Soups", "Mexican", "BBQ", "Cuban", "Bar Food", "Sports Bar", "Breakfast", "Mexican" };
+    private String[] contacts = new String[] {"0722 205133", "0720 578632",
+            "0719 582761", "0798 886256", "020 6688000", "0721 209319", "020 2664865", "0733 271272",
+            "0705 900000", "0722 202338", "020 2214770", "020 2392140", "0712 652679 ", "0718 052042", "0769 358368" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +58,7 @@ public class SearchActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        CivilBayArrayAdapter adapter = new CivilBayArrayAdapter(this, android.R.layout.simple_list_item_1, companies, skills);
+        CivilBayArrayAdapter adapter = new CivilBayArrayAdapter(this, android.R.layout.simple_list_item_1, companies, contacts);
         mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

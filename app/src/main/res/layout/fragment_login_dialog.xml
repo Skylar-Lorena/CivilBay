@@ -6,7 +6,7 @@
     android:id="@+id/baseLayout">
 
     <TextView
-        android:text="How was your experience with Civil Bay?"
+        android:text="Would you like to receive subscription NewsLetter from Civil Bay?"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/MoodLabel"
@@ -31,37 +31,24 @@
             android:padding="10dp">
 
             <RadioButton
-                android:text="Great"
+                android:text="Yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton1"
                 android:layout_weight="1" />
             <RadioButton
-                android:text="Good"
+                android:text="No"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton2"
                 android:layout_weight="1" />
-            <RadioButton
-                android:text="Okay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:id="@+id/radioButton3"
-                android:layout_weight="1" />
+
             <RadioButton
                 android:text="Meh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton4"
                 android:layout_weight="1" />
-            <RadioButton
-                android:text="Sad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton5"
-                android:layout_weight="1" />
-
 
         </RadioGroup>
     </LinearLayout>
@@ -73,7 +60,7 @@
             android:id="@+id/submitButton"/>
 
         <Button
-            android:text="cancel"
+            android:text="Cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cancelButton"/>
