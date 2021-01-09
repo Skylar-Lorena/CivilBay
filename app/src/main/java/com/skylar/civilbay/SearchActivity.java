@@ -3,6 +3,7 @@ package com.skylar.civilbay;
 import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -20,15 +21,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SearchActivity extends AppCompatActivity {
+
     public static final String TAG = SearchActivity.class.getSimpleName();
+
+    @BindView(R.id.moodButton)
+    Button moodButton;
 
     @BindView(R.id.userNameTextView)
     TextView userNameTextView;
+
     @BindView(R.id.listView)
     ListView mListView;
 
@@ -47,6 +54,10 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        FragmentManager fm = getSupportFragmentManager();
+        LoginDialogFragment LoginDialogFragment = new LoginDialogFragment ();
+        LoginDialogFragment.show(fm, "Sample Fragment");
 
         ButterKnife.bind(this);
 
