@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,7 +18,7 @@ import butterknife.OnClick;
 
 import static com.skylar.civilbay.R.layout.activity_profile;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity implements OnClickListener {
 
     //   Bind user name field
     @BindView(R.id.userNameEditText)
@@ -46,20 +47,18 @@ public class ProfileActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        signUpButton.setOnClickListener(new View.OnClickListener() {
-
+        signUpButton.setOnClickListener(this);
+    }
             @Override
             public void onClick(View v) {
-                String userName = userNameEditText.getText().toString();
-                Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
-                intent.putExtra("userName", userName);
-                startActivity(intent);
+                if (v == signUpButton) {
+                    String userName = userNameEditText.getText().toString();
+                    Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
+                    intent.putExtra("userName", userName);
+                    startActivity(intent);
 
-                Toast.makeText(ProfileActivity.this, "Sign Up Successful!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ProfileActivity.this, "Sign Up Successful!", Toast.LENGTH_LONG).show();
 
+                }
             }
-        });
-    }
-
-}
-
+        }
