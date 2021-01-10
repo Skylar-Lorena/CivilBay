@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CivilBay">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".SearchActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.skylar.civilbay.MainActivity"></meta-data>
+                android:value="com.skylar.civilbay.MainActivity" />
         </activity>
         <activity android:name=".ProfileActivity" />
         <activity android:name=".MainActivity">

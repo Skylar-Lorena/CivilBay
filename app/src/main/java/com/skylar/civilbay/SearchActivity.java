@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -35,7 +36,6 @@ public class SearchActivity extends AppCompatActivity {
 
     @BindView(R.id.listView)
     ListView mListView;
-
 
     private String[] companies = new String[] {"Kenya Builders & Concrete Co Ltd", "Ujenzibora Investment Limited",
             "Interways Works Ltd", "Sobetra Kenya", "H YOUNG & CO (E.A) LTD", "Eldad Engineering & Construction Limited",
@@ -72,7 +72,7 @@ public class SearchActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String userName = intent.getStringExtra("userName");
-        userNameTextView.setText("Here are some construction companies in your region " + userName);
+        userNameTextView.setText("Here are some construction companies in your region " +  userName);
 
     }
 }

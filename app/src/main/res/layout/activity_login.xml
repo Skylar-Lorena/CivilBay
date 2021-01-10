@@ -1,57 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/prof"
-    android:orientation="vertical"
-    tools:context=".ProfileActivity">
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height = "match_parent"
+    tools:context = ".LoginActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:text = "Civil Bay"
+        android:layout_width="wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/textview"
+        android:textSize = "35dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal = "true"
+        android:textColor = "#EAD730"
+        android:layout_alignParentTop = "true" />
+
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "Login"
+        android:id = "@+id/textView"
+        android:layout_below = "@+id/textview"
+        android:textSize = "28dp"
+        android:layout_centerHorizontal = "true"/>
+
+    <EditText
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/userName"
+        android:hint = "Enter Name"
+        android:focusable = "true"
+        android:textColorHighlight = "#548E56"
+        android:textColorHint = "#07135A"
+        android:layout_marginTop = "46dp"
+        android:layout_below = "@+id/imageView"
+        android:layout_alignParentStart = "true"
+        android:layout_alignParentEnd = "true" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please Sign in to Continue!"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/imageView"
+        android:src="@drawable/profimage"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
     <EditText
-        android:id="@+id/emailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Enter Email Address"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/black" />
-
-
-
-    <EditText
-
         android:id="@+id/password"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@color/white"
+        android:layout_below="@+id/userName"
+        android:layout_alignEnd="@+id/userName"
+        android:layout_alignParentStart="true"
         android:ems="10"
-        android:hint="Enter Password"
+        android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="@color/black" />
+        android:textColorHint="#07135A" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attempts Left:"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/password"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toEndOf="@+id/textview"
+        android:textSize="25sp" />
 
     <Button
-        android:id="@+id/signInButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="login"
         android:layout_marginTop="8dp"
-        android:background="@color/purple_200"
-        android:text="Sign In" />
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textview" />
 
-</LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/button2"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/textview" />
+
+</RelativeLayout>
