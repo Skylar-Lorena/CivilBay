@@ -1,18 +1,5 @@
 package com.skylar.civilbay;
 
-import android.os.Bundle;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +13,8 @@ import androidx.fragment.app.FragmentManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static android.widget.Toast.makeText;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -66,13 +55,12 @@ public class SearchActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String companies = ((TextView)view).getText().toString();
 
-                Toast.makeText(SearchActivity.this, companies, Toast.LENGTH_LONG).show();
+                makeText(SearchActivity.this, companies, Toast.LENGTH_LONG).show();
             }
         });
 
-        Intent intent = getIntent();
-        String userName = intent.getStringExtra("userName");
-        userNameTextView.setText("Here are some construction companies in your region " +  userName);
+        userNameTextView.setText("Here are some construction companies in your region " );
 
     }
+
 }

@@ -45,6 +45,16 @@
         android:textColor="@color/black" />
 
     <EditText
+        android:id="@+id/userNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter User Name "
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:background="@color/white"/>
+
+    <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,15 +76,6 @@
         android:inputType="textPassword"
         android:textColor="@color/black" />
 
-    <EditText
-        android:id="@+id/userNameEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter User Name "
-        android:layout_marginTop="15dp"
-        android:textColor="@color/black"
-        android:background="@color/white"/>
 
     <Button
         android:id="@+id/signUpButton"
