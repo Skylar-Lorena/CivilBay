@@ -24,7 +24,7 @@ Java
 
 1.Download and install Android SDK Download
 2.Install JAVA
-3.Clone or download this repository (link in the section below) to your local machine and run in ur code editor.
+3.Clone or download this repository (link in the section below) to your local machine.
 4.Launch the project in Android Studio
 5.Run the application on the emulator
 
