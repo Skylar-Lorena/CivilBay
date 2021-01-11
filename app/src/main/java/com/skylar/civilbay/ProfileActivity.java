@@ -1,74 +1,100 @@
 package com.skylar.civilbay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import androidx.appcompat.app.AppCompatActivity;
 
-import static com.skylar.civilbay.R.layout.activity_profile;
+import com.google.android.material.textfield.TextInputLayout;
 
-public class ProfileActivity extends AppCompatActivity implements OnClickListener {
+public class ProfileActivity extends AppCompatActivity {
 
-    //   Bind user name field
-    @BindView(R.id.userNameEditText)
-    EditText userNameEditText;
-
-    //   Bind User occupation
-    @BindView(R.id.occupation)
-    EditText occupation;
-
-    //   Bind User email
-    @BindView(R.id.email)
-    EditText email;
-
-    //   Bind User password
-    @BindView(R.id.password)
-    EditText password;
-
-    //    Do the same for sign Up button
-    @BindView(R.id.signUpButton)
-    Button signUpButton;
-
-    @BindView(R.id.loginButton)
-    Button loginButton;
+    EditText name, email, phone, password;
+    Button register;
+    TextView login;
+    boolean isNameValid, isEmailValid, isPhoneValid, isPasswordValid;
+    TextInputLayout nameError, emailError, phoneError, passError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(activity_profile);
+        setContentView(R.layout.activity_profile);
 
-        ButterKnife.bind(this);
+        name = (EditText) findViewById(R.id.name);
+        email = (EditText) findViewById(R.id.email);
+        phone = (EditText) findViewById(R.id.phone);
+        password = (EditText) findViewById(R.id.password);
+        login = (TextView) findViewById(R.id.login);
+        register = (Button) findViewById(R.id.register);
+        nameError = (TextInputLayout) findViewById(R.id.nameError);
+        emailError = (TextInputLayout) findViewById(R.id.emailError);
+        phoneError = (TextInputLayout) findViewById(R.id.phoneError);
+        passError = (TextInputLayout) findViewById(R.id.passError);
 
-        signUpButton.setOnClickListener(this);
-        loginButton.setOnClickListener(this);
-    }
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v) {
-                if (v == loginButton) {
-                    Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
-                    startActivity(intent);
+        public void SetValidation () {
+            // Check for a valid name.
+            if (name.getText().toString().isEmpty()) {
+                nameError.setError(getResources().getString(R.string.name_error));
+                isNameValid = false;
+            } else {
+                isNameValid = true;
+                nameError.setErrorEnabled(false);
+            }
 
-                }
-               else if (v == signUpButton) {
-                    String userName = userNameEditText.getText().toString();
-                    Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
-                    intent.putExtra("userName", userName);
-                    startActivity(intent);
+            // Check for a valid email address.
+            if (email.getText().toString().isEmpty()) {
+                emailError.setError(getResources().getString(R.string.email_error));
+                isEmailValid = false;
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
+                emailError.setError(getResources().getString(R.string.error_invalid_email));
+                isEmailValid = false;
+            } else {
+                isEmailValid = true;
+                emailError.setErrorEnabled(false);
+            }
 
-                    Toast.makeText(ProfileActivity.this, "Sign Up Successful!", Toast.LENGTH_LONG).show();
-                }
-            };
-}
+            // Check for a valid phone number.
+            if (phone.getText().toString().isEmpty()) {
+                phoneError.setError(getResources().getString(R.string.phone_error));
+                isPhoneValid = false;
+            } else {
+                isPhoneValid = true;
+                phoneError.setErrorEnabled(false);
+            }
 
+            // Check for a valid password.
+            if (password.getText().toString().isEmpty()) {
+                passError.setError(getResources().getString(R.string.password_error));
+                isPasswordValid = false;
+            } else if (password.getText().length() < 6) {
+                passError.setError(getResources().getString(R.string.error_invalid_password));
+                isPasswordValid = false;
+            } else {
+                isPasswordValid = true;
+                passError.setErrorEnabled(false);
+            }
+
+            if (isNameValid && isEmailValid && isPhoneValid && isPasswordValid) {
+
+                Toast.makeText(getApplicationContext(), "Successfully", Toast.LENGTH_SHORT).show();
+
+
+            }
+
+        }
+    }

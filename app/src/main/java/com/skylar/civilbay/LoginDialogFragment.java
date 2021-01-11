@@ -27,15 +27,16 @@ public class LoginDialogFragment extends DialogFragment {
 
             @Override
             public void onClick(View v) {
+
                 dismiss();
             }
         });
-            RadioGroup surveyRadioGroup = (RadioGroup) rootView.findViewById(R.id.moodRadioGroup); //pull group
-            int selectedId = surveyRadioGroup.getCheckedRadioButtonId(); //get selected ID
-            final RadioButton selectedRadioButton = (RadioButton) rootView.findViewById(selectedId); //get r button val via ID
+        RadioGroup surveyRadioGroup = (RadioGroup) rootView.findViewById(R.id.moodRadioGroup); //pull group
+        int selectedId = surveyRadioGroup.getCheckedRadioButtonId(); //get selected ID
+        final RadioButton selectedRadioButton = (RadioButton) rootView.findViewById(selectedId); //get r button val via ID
 
 
-         submitButton.setOnClickListener(new View.OnClickListener() {
+        submitButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -43,7 +44,6 @@ public class LoginDialogFragment extends DialogFragment {
                 dismiss();
             }
         });
-
         return rootView;
     }
 }

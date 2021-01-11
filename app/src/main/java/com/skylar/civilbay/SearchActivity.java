@@ -1,6 +1,5 @@
 package com.skylar.civilbay;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -59,7 +58,7 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
-        userNameTextView.setText("Here are some construction companies in your region " );
+        userNameTextView.setText("Welcome! Here are some construction companies in your region: " );
 
     }
 

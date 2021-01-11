@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity"
-    android:textColor="@color/navy">
+    tools:context=".SearchActivity">
 
     <TextView
         android:id="@+id/userNameTextView"
@@ -13,6 +12,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="18dp"
         android:textSize="20sp"
+        android:textStyle="bold|italic"
         android:fontFamily="@font/roboto"/>
 
     <ListView
@@ -23,6 +23,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="18dp"
         android:textSize="18sp"
-        android:background="@drawable/list"/>
+        android:fontFamily="cursive"
+        android:textStyle="bold|italic"
+        android:listSelector="@color/purple_200"
+        android:background="@color/yellow"/>
 
 </RelativeLayout>

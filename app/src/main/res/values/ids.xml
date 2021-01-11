@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nameError" type="id" />
+    <item name="phoneError" type="id" />
+    <item name="emailError" type="id" />
+    <item name="passError" type="id" />
+</resources>
