@@ -10,6 +10,7 @@ Civil Bay is a mobile application that is built on Android framework to allow co
 
 ```
 ## Technologies Used
+
 Java
 
 ## Installation
@@ -20,10 +21,23 @@ Java
 ## Launching the Application
 
 ```bash
-1.Launch the project in Android Studio
+
+1.Download and install Android SDK Download
+2.Install JAVA
+3.Clone or download this repository (link in the section below) to your local machine and run in ur code editor.
+4.Launch the project in Android Studio
+5.Run the application on the emulator
 
 ```
 
+## BDD
+
+```bash
+Sign up
+Login to view construction companies
+Navigate to home page with Up button
+
+```
 
 ## Contact Details and Documentation
 
